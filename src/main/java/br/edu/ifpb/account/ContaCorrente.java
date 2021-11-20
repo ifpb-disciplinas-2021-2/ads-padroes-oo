@@ -1,4 +1,4 @@
-package br.edu.ifpb;
+package br.edu.ifpb.account;
 
 /**
  * @author Ricardo Job
@@ -6,6 +6,7 @@ package br.edu.ifpb;
  * @since 26/10/2021, 10:11:07
  */
 // classes e tipos
+//CBO>15, 90% isso gera um bug, falta ou falha
 public class ContaCorrente implements Conta{  //Abstração
 
     //caracteristicas -> atributos
@@ -42,10 +43,4 @@ public class ContaCorrente implements Conta{  //Abstração
         if(valor.zerado())
             throw new IllegalArgumentException(mensagem);
     }
-}
-
-//tipo -> comportamento
-interface Conta{ //contrato
-    void depositar(Dinheiro valor); //comportamento
-    void saque(Dinheiro valor); //comportamento
 }

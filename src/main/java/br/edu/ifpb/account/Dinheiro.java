@@ -1,7 +1,8 @@
-package br.edu.ifpb;
+package br.edu.ifpb.account;
 
 import java.util.Objects;
 
+//WMC=3
 public class Dinheiro { // imutabilidade
     private final double valor;
     public Dinheiro(double valor) {
@@ -16,9 +17,9 @@ public class Dinheiro { // imutabilidade
         );
     }
 
-    public Dinheiro diminuir(Dinheiro dinheiro) {
+    public Dinheiro diminuir(Dinheiro dinheiro) { //0
         return new Dinheiro(
-                this.valor - dinheiro.valor
+                this.valor - dinheiro.valor //simples de compreender esse código?
         );
     }
 
@@ -27,13 +28,13 @@ public class Dinheiro { // imutabilidade
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) { //2
+        //medir a complexidade deste método. Se tem if adicionar 1
+        if (this == o) return true; //1
+        if (o == null || getClass() != o.getClass()) return false; //2
         Dinheiro dinheiro = (Dinheiro) o;
         return Double.compare(dinheiro.valor, valor) == 0;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(valor);

@@ -1,7 +1,10 @@
-package br.edu.ifpb;
+package br.edu.ifpb.account;
 
+import br.edu.ifpb.account.ContaCorrente;
+import br.edu.ifpb.account.Dinheiro;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class ContaCorrenteTest {
     
